@@ -15,7 +15,7 @@ My purpose in this project is that I can provide for designers a tool which help
 ## Model
 ### 1. Preparation
 #### a. Dataset
-When collect-ing the shoe photo images and sketches, we have downloaded dataset from www.eecs.qmul.ac.uk/~qian/Qian's%20Materials/ShoeV2.zip . This dataset covers **2000** sketches and **6648** photos shoes of different types including boots, high-heels, ballerinas, formal and in-formal shoes. 
+When collect-ing the shoe photo images and sketches, we have downloaded dataset from www.eecs.qmul.ac.uk/~qian/Qian's%20Materials/ShoeV2.zip . This dataset covers **6648** sketches and **2000** photos shoes of different types including boots, high-heels, ballerinas, formal and in-formal shoes. 
 
 ![](https://i.imgur.com/Sf2iRji.png)
 

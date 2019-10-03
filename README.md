@@ -38,6 +38,7 @@ Now, we compare these two encodings to check whether there is a similarity betwe
 
 #### Triplet Loss
 ![](https://i.imgur.com/HgXLwub.png)
+
 The network could be trained by taking an anchor image and comparing it with both a positive sample and a negative sample. The dissimilarity between the anchor image and positive image must low and the dissimilarity between the anchor image and the negative image must be high.
 
 ![](https://i.imgur.com/4CCBItO.png)

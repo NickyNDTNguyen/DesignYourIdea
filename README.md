@@ -128,6 +128,7 @@ with tf.Session() as sess:
 After this step, we will have 10 feature vectors for sketch and 20000 feature vectors for 2000 photos.
 
 **6. Calculate average for sketch and images.**
+
 We will calculate mean() for 10 feature vectors of sketch.
 And also calculate mean() for each 10 feature vectors of photos.
 After this step, we will have only 1 feature vectors for sketch and 2000 feature vectors for 2000 photos.

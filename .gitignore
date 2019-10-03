@@ -1,0 +1,4 @@
+py2env/
+static/data_files/*
+static/images/*
+static/models/*

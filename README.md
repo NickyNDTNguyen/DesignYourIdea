@@ -43,6 +43,14 @@ The network could be trained by taking an anchor image and comparing it with bot
 ![](https://i.imgur.com/4CCBItO.png)
 
 The formula above represents the triplet loss function using which gradients are calculated. The variable “a” represents the anchor image, “p” represents a positive image and “n” represents a negative image. We know that the dissimilarity between a and p should be less than the dissimilarity between a and n,. Another variable called margin, which is a hyperparameter is added to the loss equation. Margin defines how far away the dissimilarities should be, i.e if margin = 0.2 and d(a,p) = 0.5 then d(a,n) should at least be equal to 0.7. Margin helps us distinguish the two images better.
+```python
+def compute_triplet_loss(anchor_feature, positive_feature, negative_feature, margin):
+    with tf.name_scope("triplet_loss"):
+        d_p_squared = square_distance(anchor_feature, positive_feature)
+        d_n_squared = square_distance(anchor_feature, negative_feature)
+        loss = tf.maximum(0., d_p_squared - d_n_squared + margin)
+        return tf.reduce_mean(loss), tf.reduce_mean(d_p_squared), tf.reduce_mean(d_n_squared)
+```
 
 Therefore, by using this loss function we calculate the gradients and with the help of the gradients, we update the weights and biases of the siamese network. For training the network, we take an anchor image and randomly sample positive and negative images and compute its loss function and update its gradients.
 
